@@ -17,7 +17,7 @@ function ShoppingList({ items }) {
   }
 
   const itemsToDisplay = items.filter((item) => {
-    if (selectedCategory === "All") return true;
+    if (selectedCategory === "All" && item.name.includes(search)) return true;
 
     return item.category === selectedCategory;
   });
